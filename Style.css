@@ -50,3 +50,14 @@
             background-color: red;
             color: white;
         }
+      .destaque {
+    background-color: #22c55e;
+    color: #000;
+    font-weight: bold;
+       }
+
+    .destaque::after {
+    content: " ⭐ Mais lucrativo";
+    font-size: 0.9em;
+    margin-left: 5px;
+    }
