@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- ============================================
+     HEAD - Metadados e Configurações
+     ============================================ -->
+<head>
+    <!-- Configurações básicas de encoding e responsividade -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO e descrição da página -->
+    <meta name="description" content="EXPL - Produtos energéticos de alta performance. Conheça nossa linha completa de bebidas energéticas.">
+    <meta name="keywords" content="explosion, energético, bebidas, performance, energia">
+    <meta name="author" content="EXPL Company">
+    
+    <!-- Título da página -->
+    <title>EXPL 💥 - Produtos Energéticos</title>
+    
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<!-- ============================================
+     BODY - Conteúdo Principal
+     ============================================ -->
+<body>
+
+    <!-- ============================================
+         HEADER - Cabeçalho do Site
+         ============================================ -->
+    <header role="banner">
+        <h1>EXPL 💥</h1>
+        <p class="subtitle">Welcome to EXPL💥</p>
+    </header>
+
+    <!-- ============================================
+         MAIN - Conteúdo Principal
+         ============================================ -->
+    <main role="main">
+        
+        <!-- Seção: Produtos em Destaque -->
+        <section class="produtos-destaque" aria-labelledby="produtos-titulo">
+            <h2 id="produtos-titulo">🔥 Produtos em Destaque</h2>
+            
+            <!-- Tabela de produtos com melhor performance -->
+            <table role="table" aria-label="Tabela de produtos em destaque">
+                <thead>
+                    <tr>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Lucro (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Explosion Morango</td>
+                        <td>6.480,80</td>
+                    </tr>
+                    <tr>
+                        <td>Explosion Prime Uva</td>
+                        <td>5.277,86</td>
+                    </tr>
+                    <tr>
+                        <td>Explosion Açaí</td>
+                        <td>3.529,55</td>
+                    </tr>
+                    <tr>
+                        <td>Explosion Citrus</td>
+                        <td>3.020,87</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção: Contato -->
+        <section class="contato" aria-labelledby="contato-titulo">
+            <h2 id="contato-titulo">📞 Contato</h2>
+            <p>Quer saber mais sobre nossos produtos?</p>
+            
+            <!-- Botão de contato com ID para manipulação JS -->
+            <button 
+                id="btnContato" 
+                type="button"
+                aria-label="Clique para solicitar contato">
+                Fale com a gente
+            </button>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER - Rodapé do Site
+         ============================================ -->
+    <footer role="contentinfo">
+        <p>&copy; 2026 EXPL Company. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- ============================================
+         SCRIPTS - JavaScript
+         ============================================ -->
+    <script>
+        /**
+         * ============================================
+         * Inicialização dos Event Listeners
+         * ============================================
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            /**
+             * Event Listener: Botão de Contato
+             * Exibe mensagem de confirmação ao usuário
+             */
+            const btnContato = document.getElementById('btnContato');
+            
+            if (btnContato) {
+                btnContato.addEventListener('click', function() {
+                    alert('Entraremos em contato em breve!');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
