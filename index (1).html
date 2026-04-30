@@ -99,27 +99,35 @@
     <!-- ============================================
          SCRIPTS - JavaScript
          ============================================ -->
-    <script>
-        /**
-         * ============================================
-         * Inicialização dos Event Listeners
-         * ============================================
-         */
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            /**
-             * Event Listener: Botão de Contato
-             * Exibe mensagem de confirmação ao usuário
-             */
-            const btnContato = document.getElementById('btnContato');
-            
-            if (btnContato) {
-                btnContato.addEventListener('click', function() {
-                    alert('Entraremos em contato em breve!');
-                });
-            }
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const btnContato = document.getElementById('btnContato');
+
+    if (btnContato) {
+        btnContato.addEventListener('click', function() {
+            alert('Entraremos em contato em breve!');
         });
-    </script>
+    }
+
+    // 🔥 ADICIONE AQUI 👇
+    const linhas = document.querySelectorAll("tbody tr");
+
+    linhas.forEach(linha => {
+        const lucroTexto = linha.children[1].textContent
+            .replace('.', '')
+            .replace(',', '.');
+
+        const lucro = parseFloat(lucroTexto);
+
+        if (lucro > 5000) {
+            linha.classList.add("destaque");
+        }
+    });
+
+});
+</script>
+
 
 </body>
 </html>
